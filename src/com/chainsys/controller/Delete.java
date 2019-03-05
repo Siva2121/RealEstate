@@ -1,6 +1,7 @@
 package com.chainsys.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -10,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chainsys.DAO.RealEstateDAO;
-import com.chainsys.model.RealEstate;
 
 /**
  * Servlet implementation class Delete
@@ -27,6 +27,8 @@ public class Delete extends HttpServlet {
 		RealEstateDAO realEstateDAO = new RealEstateDAO();
 		try {
 			realEstateDAO.delete(flatNumber);
+			PrintWriter out=response.getWriter();
+			out.print("Deleted");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

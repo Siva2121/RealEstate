@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="get" action="FindAll">
-<button type="submit">Display real estate</button>
-</form>
   <table>
   <thead>
   <tr>

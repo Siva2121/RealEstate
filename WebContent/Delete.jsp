@@ -6,9 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>REAL ESTATE</title>
 </head>
-<body>
+<style>
+body{
+margin-left: 500px;
+margin-top: 150px;
+}
+</style>
+
+<body  bgcolor="#E6E6FA">
 	<form action="Delete" method="post">
-		<table align="center" border="0">
+		<table>
 			<tr>
 				<td colspan="3" align="center">DETAILS REMOVING</td>
 			</tr>
@@ -22,10 +29,10 @@
 					value="SUBMIT"></td>
 			</tr>
 			<tr>
-				<td colspan="3" align="center"><a href="home.jsp">HOME</a></td>
+				<td colspan="3" align="center"><a href="Home.jsp">HOME</a></td>
 			</tr>
 			<tr>
-				<td colspan="3" align="center"><a href="index.html">LOGOUT</a>
+				<td colspan="3" align="center"><a href="Login.html">LOGOUT</a>
 				</td>
 			</tr>
 		</table>

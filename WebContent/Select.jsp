@@ -22,10 +22,10 @@
 					value="SUBMIT"></td>
 			</tr>
 			<tr>
-				<td colspan="3" align="center"><a href="home.jsp">HOME</a></td>
+				<td colspan="3" align="center"><a href="Home.jsp">HOME</a></td>
 			</tr>
 			<tr>
-				<td colspan="3" align="center"><a href="index.html">LOGOUT</a>
+				<td colspan="3" align="center"><a href="Login.html">LOGOUT</a>
 				</td>
 			</tr>
 		</table>

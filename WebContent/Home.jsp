@@ -36,7 +36,7 @@ body {
 			</td>
 		</tr>
 		<tr>
-			<td colspan="3" align="center"><a href="Index.html">LOGOUT</a>
+			<td colspan="3" align="center"><a href="Login.html">LOGOUT</a>
 			</td>
 		</tr>
 </table>

@@ -34,5 +34,6 @@
   </c:forEach>
   </tbody>
   </table>
+<br><a href="Home.jsp">HOME</a>
 </body>
 </html>

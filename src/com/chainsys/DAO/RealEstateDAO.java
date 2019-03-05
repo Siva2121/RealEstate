@@ -85,4 +85,59 @@ public void update(RealEstate realEstate) throws SQLException {
 	int row = preparedStatement.executeUpdate();
 	System.out.println(row + "row affected");
 }
+public boolean validateLogin(String userName, String password)
+		throws Exception {
+
+	boolean isValid = false;
+	Connection connection = ConnectionUtil.getconnection();
+	PreparedStatement preparedStatement;
+	ResultSet resultSet;
+	try {
+String		sql = "select user_name,password from admin";
+		preparedStatement = connection.prepareStatement(sql);
+		resultSet = preparedStatement.executeQuery(sql);
+
+		while (resultSet.next()) {
+			if (resultSet.getString("user_name").contentEquals(userName)
+					&& resultSet.getString("password").contentEquals(
+							password)) {
+				isValid = true;
+			}
+		}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		throw new Exception("Invalid Username or Password");
+	}
+	
+	return isValid;
+
+}
+public boolean validateUserLogin(String userName, String password)
+		throws Exception {
+
+	boolean isValid = false;
+	Connection connection = ConnectionUtil.getconnection();
+	PreparedStatement preparedStatement;
+	ResultSet resultSet;
+	try {
+String		sql = "select user_name,password from userlogin";
+		preparedStatement = connection.prepareStatement(sql);
+		resultSet = preparedStatement.executeQuery(sql);
+
+		while (resultSet.next()) {
+			if (resultSet.getString("user_name").contentEquals(userName)
+					&& resultSet.getString("password").contentEquals(
+							password)) {
+				isValid = true;
+			}
+		}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		throw new Exception("Invalid Username or Password");
+	}
+	
+	return isValid;
+
+}
+
 }
