@@ -1,1 +1,8 @@
 create table real_estate(flat_Number number(5) primary key,flat_Owner_Name varchar2(10),area varchar2(10),district varchar2(10),length number(5),contact_Number number(10),amount number(10));
+
+create table admin(user_name varchar2(20)constraint id_pk primary key,password varchar2(20));
+insert into admin values('siva','siva284');
+
+create table userlogin(user_name varchar2(20)constraint user_id_pk primary key,password varchar2(20));
+insert into userlogin values('ric','richard');
+insert into userlogin values('rocky','rocky7');
