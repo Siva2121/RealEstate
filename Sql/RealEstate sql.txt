@@ -1,0 +1,1 @@
+create table real_estate(flat_Number number(5) primary key,flat_Owner_Name varchar2(10),area varchar2(10),district varchar2(10),length number(5),contact_Number number(10),amount number(10));
