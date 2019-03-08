@@ -39,10 +39,10 @@ public int getAmount() {
 public void setAmount(int amount) {
 	this.amount = amount;
 }
-public String getContactNumber() {
+public long getContactNumber() {
 	return contactNumber;
 }
-public void setContactNumber(String contactnumber) {
+public void setContactNumber(long contactnumber) {
 	this.contactNumber = contactnumber;
 }
 public String getOwnerName() {
@@ -56,6 +56,6 @@ private String area;
 private String district;
 private int length;
 private int amount;
-private String contactNumber;
+private long contactNumber;
 private String ownerName;
 }

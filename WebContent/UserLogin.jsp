@@ -6,7 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<style>
+body{
+margin-left: 600px;
+margin-top: 150px;
+ background-color: lightblue
+}
+</style>
+<div >
 <form action="UserLoginController" method="post">
 			<table>
 				<tr>
@@ -41,6 +48,6 @@
 			</table>
 		
 	</form>
-
+</div>
 </body>
 </html>

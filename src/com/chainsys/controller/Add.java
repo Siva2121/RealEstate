@@ -34,7 +34,7 @@ public class Add extends HttpServlet {
 		int length= Integer.parseInt(request.getParameter("length"));
 		String ownerName = request.getParameter("ownerName");
 		int amount= Integer.parseInt(request.getParameter("amount"));
-		String contactNumber=request.getParameter("contactNumber");
+		long contactNumber=Long.parseLong(request.getParameter("contactNumber"));
 
 	RealEstate realEstate=new RealEstate();
 	realEstate.setFlatNumber(flatNumber);

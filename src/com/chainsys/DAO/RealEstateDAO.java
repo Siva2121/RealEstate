@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.chainsys.controller.ConnectionUtil;
 import com.chainsys.model.RealEstate;
@@ -19,7 +20,7 @@ public class RealEstateDAO {
 		preparedStatement.setString(3, realEstate.getArea());
 		preparedStatement.setString(4, realEstate.getDistrict());
 		preparedStatement.setInt(5, realEstate.getLength());
-		preparedStatement.setString(6, realEstate.getContactNumber());
+		preparedStatement.setLong(6, realEstate.getContactNumber());
 		preparedStatement.setInt(7, realEstate.getAmount());
 
 		int row = preparedStatement.executeUpdate();
@@ -49,19 +50,19 @@ public class RealEstateDAO {
 			estate.setArea(resultSet.getString("area"));
 			estate.setDistrict(resultSet.getString("district"));
 			estate.setLength(resultSet.getInt("length"));
-			estate.setContactNumber(resultSet.getString("contact_number"));
+			estate.setContactNumber(resultSet.getLong("contact number"));
 			estate.setAmount(resultSet.getInt("amount"));
 		}
 		return estate;
 	}
 
-	public ArrayList<RealEstate> findAll() throws SQLException {
+	public List<RealEstate> findAll() throws SQLException {
 		Connection connection = ConnectionUtil.getconnection();
 		String sql = "select flat_number,flat_owner_name,area,district,length,contact_number,amount from real_estate";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		ResultSet resultSet = preparedStatement.executeQuery();
 		//RealEstate estate = new RealEstate();
-		ArrayList<RealEstate> arrayList=new ArrayList<RealEstate>();
+		List<RealEstate> arrayList=new ArrayList<RealEstate>();
 		while (resultSet.next()) {
 			RealEstate estate = new RealEstate();
 			estate.setFlatNumber(resultSet.getInt("flat_number"));
@@ -69,7 +70,7 @@ public class RealEstateDAO {
 			estate.setArea(resultSet.getString("area"));
 			estate.setDistrict(resultSet.getString("district"));
 			estate.setLength(resultSet.getInt("length"));
-			estate.setContactNumber(resultSet.getString("contact_number"));
+			estate.setContactNumber(resultSet.getLong("contact_Number"));
 			estate.setAmount(resultSet.getInt("amount"));
 		arrayList.add(estate);
 		}

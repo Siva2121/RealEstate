@@ -3,6 +3,7 @@ package com.chainsys.controller;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,7 +29,7 @@ public class FindAll extends HttpServlet {
 
 		RealEstateDAO realEstateDAO = new RealEstateDAO();
 		try {
-			ArrayList<RealEstate> listrealestate = realEstateDAO.findAll();
+			List<RealEstate> listrealestate = realEstateDAO.findAll();
 			request.setAttribute("realestate", listrealestate);
 			RequestDispatcher dispatcher = request
 					.getRequestDispatcher("DisplayAll.jsp");
